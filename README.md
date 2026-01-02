@@ -19,6 +19,7 @@ A stunning, interactive New Year celebration website featuring stunning animatio
 - ⭐ **Twinkling Stars** - Animated background starfield
 - ⏰ **Live Countdown** - Countdown timer to New Year 2026
 - 💫 **Sparkle Effects** - Interactive sparkle effects on click
+- 💻 **ST Command** - Access the celebration at [https://perposal-seven.vercel.app](https://perposal-seven.vercel.app)
 - 📱 **Fully Responsive** - Works perfectly on mobile and desktop
 - 🎨 **Gradient Animations** - Beautiful animated gradients
 - 👤 **Name Personalization** - Enter your name for personalized wishes
