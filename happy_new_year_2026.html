@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎊 Happy New Year 2026 🎊</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        /* Animated Background Stars */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .star {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 2s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.5); }
+        }
+
+        /* Main Container */
+        .container {
+            z-index: 10;
+            text-align: center;
+            padding: 30px;
+            position: relative;
+        }
+
+        /* Big 2026 Text */
+        .year-container {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .year {
+            font-size: 8rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #54a0ff);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 3s ease infinite, float 3s ease-in-out infinite;
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotateX(0); }
+            50% { transform: translateY(-20px) rotateX(5deg); }
+        }
+
+        /* Happy New Year Text */
+        .title {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            animation: pulse 2s ease-in-out infinite;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* Name Display */
+        .name {
+            font-size: 1.8rem;
+            color: #ffd700;
+            margin: 15px 0;
+            opacity: 0;
+            animation: fadeInUp 1s forwards 0.5s;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Wishes Text */
+        .wishes {
+            font-size: 1.3rem;
+            color: #e0e0e0;
+            margin: 10px 0 25px;
+            opacity: 0;
+            animation: fadeInUp 1s forwards 1s;
+        }
+
+        /* Celebration Button */
+        .blast-btn {
+            padding: 18px 45px;
+            font-size: 1.3rem;
+            border: none;
+            border-radius: 50px;
+            background: linear-gradient(45deg, #ff0080, #ff8c00, #40e0d0);
+            background-size: 300% 300%;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 0 30px rgba(255, 0, 128, 0.5);
+            animation: gradientShift 3s ease infinite, bounce 2s infinite;
+            transition: transform 0.3s, box-shadow 0.3s;
+            opacity: 0;
+            animation-fill-mode: forwards;
+            animation-delay: 1.5s;
+        }
+
+        .blast-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 50px rgba(255, 0, 128, 0.8);
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Fireworks Container */
+        .fireworks {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        /* Confetti */
+        .confetti {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            top: -20px;
+            animation: confettiFall linear forwards;
+        }
+
+        @keyframes confettiFall {
+            to {
+                transform: translateY(110vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        /* Hearts */
+        .heart {
+            position: absolute;
+            font-size: 2rem;
+            animation: floatUp linear forwards;
+            z-index: 8;
+        }
+
+        @keyframes floatUp {
+            to {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Countdown Timer */
+        .countdown {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px 25px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+
+        .countdown h3 {
+            font-size: 0.9rem;
+            color: #aaa;
+            margin-bottom: 5px;
+        }
+
+        .countdown-time {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        /* Quote Section */
+        .quote {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            max-width: 80%;
+            z-index: 100;
+        }
+
+        .quote p {
+            font-style: italic;
+            color: #ddd;
+        }
+
+        /* Sparkles */
+        .sparkle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: radial-gradient(circle, white, transparent);
+            border-radius: 50%;
+            animation: sparkleAnim 1s ease-out forwards;
+            pointer-events: none;
+            z-index: 6;
+        }
+
+        @keyframes sparkleAnim {
+            0% { transform: scale(0); opacity: 1; }
+            100% { transform: scale(2); opacity: 0; }
+        }
+
+        /* Balloons */
+        .balloon {
+            position: absolute;
+            width: 60px;
+            height: 80px;
+            background: radial-gradient(circle at 30% 30%, var(--balloon-color), darken(var(--balloon-color), 30%));
+            border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+            animation: balloonFloat linear forwards;
+            z-index: 3;
+        }
+
+        .balloon::before {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            width: 2px;
+            height: 30px;
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        @keyframes balloonFloat {
+            to {
+                transform: translateY(-120vh) rotate(10deg);
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .year {
+                font-size: 5rem;
+            }
+            .title {
+                font-size: 2.5rem;
+            }
+            .name {
+                font-size: 1.4rem;
+            }
+            .wishes {
+                font-size: 1.1rem;
+            }
+            .countdown {
+                top: auto;
+                bottom: 100px;
+                right: 50%;
+                transform: translateX(50%);
+            }
+        }
+
+        /* Name Input Styles */
+        .name-input-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin: 15px 0;
+            opacity: 0;
+            animation: fadeInUp 1s forwards 0.8s;
+        }
+
+        .name-input-container input {
+            padding: 12px 20px;
+            font-size: 1.1rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-align: center;
+            outline: none;
+            transition: all 0.3s ease;
+            width: 250px;
+        }
+
+        .name-input-container input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .name-input-container input:focus {
+            border-color: #ffd700;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .name-submit-btn {
+            padding: 10px 25px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(45deg, #ff0080, #ff8c00);
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 0 15px rgba(255, 0, 128, 0.4);
+            transition: all 0.3s ease;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        .name-submit-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 25px rgba(255, 0, 128, 0.7);
+        }
+
+        @keyframes glow {
+            from { box-shadow: 0 0 15px rgba(255, 0, 128, 0.4); }
+            to { box-shadow: 0 0 25px rgba(255, 0, 128, 0.8); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Stars -->
+    <div class="stars" id="stars"></div>
+
+    <!-- Fireworks Container -->
+    <div class="fireworks" id="fireworks"></div>
+
+    <!-- Countdown Timer -->
+    <div class="countdown">
+        <h3>🎉 New Year In</h3>
+        <div class="countdown-time" id="countdown">Loading...</div>
+    </div>
+
+        <!-- Main Content -->
+        <div class="container">
+        <div class="year-container">
+            <div class="year">2026</div>
+        </div>
+        <h1 class="title">🎊 Happy New Year 🎊</h1>
+        
+        <!-- Name Input Section -->
+        <div class="name-input-container" id="nameInputSection">
+            <input type="text" id="nameInput" placeholder="Enter your name..." maxlength="30" />
+            <button class="name-submit-btn" onclick="submitName()">✨ Set Name ✨</button>
+        </div>
+        
+        <!-- Display Name (hidden initially) -->
+        <p class="name" id="name" style="display: none;"></p>
+        
+        <p class="wishes" id="wishes"></p>
+        <button class="blast-btn" onclick="megaBlast()">🎉 CELEBRATE 🎉</button>
+    </div>
+
+    <!-- Quote -->
+    <div class="quote">
+        <p id="quote">"May this year bring you endless joy, success, and beautiful moments!" ✨</p>
+    </div>
+
+    <script>
+        // Check if name is provided via URL
+        const params = new URLSearchParams(window.location.search);
+        const urlName = params.get("name");
+        
+        if (urlName) {
+            // If URL has name, show it directly
+            document.getElementById('name').innerText = `🎵 Dear ${urlName} 🎵`;
+            document.getElementById('name').style.display = 'block';
+            document.getElementById('name').style.opacity = '0';
+            document.getElementById('name').style.animation = 'fadeInUp 1s forwards 0.8s';
+            document.getElementById('nameInputSection').style.display = 'none';
+        }
+        
+        // Submit Name Function
+        function submitName() {
+            const nameInput = document.getElementById('nameInput').value.trim();
+            const name = nameInput || "My Dear Friend";
+            
+            // Hide input section
+            document.getElementById('nameInputSection').style.display = 'none';
+            
+            // Show name
+            const nameDisplay = document.getElementById('name');
+            nameDisplay.innerText = `🎵 Dear ${name} 🎵`;
+            nameDisplay.style.display = 'block';
+            nameDisplay.style.opacity = '0';
+            nameDisplay.style.animation = 'fadeInUp 1s forwards';
+            
+            // Special celebration for name submission
+            createConfetti(150);
+            createFirework(window.innerWidth / 2, window.innerHeight / 3);
+        }
+        
+        // Allow Enter key to submit
+        document.getElementById('nameInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                submitName();
+            }
+        });
+        
+        const wishes = [
+            "✨ Wishing you success, happiness & endless love!",
+            "🌟 May all your dreams come true this year!",
+            "💫 Prosperity and joy surround you always!",
+            "🎯 New beginnings, new adventures await!",
+            "❤️ Love and laughter fill your every day!"
+        ];
+        document.getElementById('wishes').innerText = wishes[Math.floor(Math.random() * wishes.length)];
+
+        // Create Stars
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            for (let i = 0; i < 150; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 2 + 's';
+                star.style.width = Math.random() * 3 + 1 + 'px';
+                star.style.height = star.style.width;
+                starsContainer.appendChild(star);
+            }
+        }
+        createStars();
+
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const nextYear = year >= 2026 ? 2027 : 2026;
+            const newYear = new Date(`January 1, ${nextYear} 00:00:00`);
+            const diff = newYear - now;
+
+            if (diff > 0) {
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+                document.getElementById('countdown').innerText = 
+                    `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            } else {
+                document.getElementById('countdown').innerText = "🎉 HAPPY NEW YEAR! 🎉";
+            }
+        }
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // Enhanced Confetti
+        function createConfetti(amount = 200) {
+            const colors = ['#ff6b6b', '#feca57', '#48dbfb', '#ff9ff3', '#54a0ff', '#5f27cd', '#00d2d3', '#ff9f43', '#10ac84', '#ee5253'];
+            const shapes = ['square', 'circle'];
+            
+            for (let i = 0; i < amount; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.left = Math.random() * 100 + 'vw';
+                    confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.animationDuration = (Math.random() * 2 + 3) + 's';
+                    confetti.style.width = Math.random() * 12 + 6 + 'px';
+                    confetti.style.height = confetti.style.width;
+                    confetti.style.borderRadius = shapes[Math.floor(Math.random() * shapes.length)] === 'circle' ? '50%' : '0';
+                    confetti.style.opacity = Math.random();
+                    document.body.appendChild(confetti);
+                    
+                    setTimeout(() => confetti.remove(), 5000);
+                }, i * 10);
+            }
+        }
+
+        // Fireworks
+        function createFirework(x, y) {
+            const colors = ['#ff6b6b', '#feca57', '#48dbfb', '#ff9ff3', '#54a0ff', '#ffd700', '#ff0080'];
+            
+            for (let i = 0; i < 30; i++) {
+                const angle = (i / 30) * Math.PI * 2;
+                const velocity = Math.random() * 150 + 100;
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                
+                const particle = document.createElement('div');
+                particle.style.cssText = `
+                    position: fixed;
+                    left: ${x}px;
+                    top: ${y}px;
+                    width: 6px;
+                    height: 6px;
+                    background: ${color};
+                    border-radius: 50%;
+                    pointer-events: none;
+                    z-index: 5;
+                `;
+                
+                document.body.appendChild(particle);
+                
+                const destX = x + Math.cos(angle) * velocity;
+                const destY = y + Math.sin(angle) * velocity;
+                
+                particle.animate([
+                    { transform: 'translate(0, 0) scale(1)', opacity: 1 },
+                    { transform: `translate(${destX - x}px, ${destY - y}px) scale(0.5)`, opacity: 0.7 }
+                ], {
+                    duration: 1000,
+                    easing: 'ease-out'
+                }).onfinish = () => particle.remove();
+            }
+        }
+
+        // Floating Hearts
+        function createHeart(amount = 30) {
+            for (let i = 0; i < amount; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.className = 'heart';
+                    heart.innerHTML = '❤️';
+                    heart.style.left = Math.random() * 100 + 'vw';
+                    heart.style.animationDuration = (Math.random() * 3 + 4) + 's';
+                    document.body.appendChild(heart);
+                    setTimeout(() => heart.remove(), 7000);
+                }, i * 100);
+            }
+        }
+
+        // Balloons
+        function createBalloon(amount = 20) {
+            const balloonColors = ['#ff6b6b', '#feca57', '#48dbfb', '#ff9ff3', '#54a0ff', '#5f27cd', '#00d2d3'];
+            
+            for (let i = 0; i < amount; i++) {
+                const balloon = document.createElement('div');
+                balloon.className = 'balloon';
+                const color = balloonColors[Math.floor(Math.random() * balloonColors.length)];
+                balloon.style.left = Math.random() * 100 + 'vw';
+                balloon.style.setProperty('--balloon-color', color);
+                balloon.style.background = `radial-gradient(circle at 30% 30%, ${color}, ${adjustColor(color, -30)})`;
+                balloon.style.animationDuration = (Math.random() * 5 + 8) + 's';
+                balloon.style.animationDelay = Math.random() * 5 + 's';
+                document.body.appendChild(balloon);
+                setTimeout(() => balloon.remove(), 15000);
+            }
+        }
+
+        // Helper function to darken colors
+        function adjustColor(color, amount) {
+            return color; // Simplified for demo
+        }
+
+        // Sparkle Effect
+        function createSparkle(x, y) {
+            for (let i = 0; i < 10; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                sparkle.style.left = (x + Math.random() * 100 - 50) + 'px';
+                sparkle.style.top = (y + Math.random() * 100 - 50) + 'px';
+                document.body.appendChild(sparkle);
+                setTimeout(() => sparkle.remove(), 1000);
+            }
+        }
+
+        // Mega Blast Function
+        function megaBlast() {
+            // Multiple fireworks
+            for (let i = 0; i < 5; i++) {
+                setTimeout(() => {
+                    createFirework(
+                        Math.random() * window.innerWidth,
+                        Math.random() * window.innerHeight * 0.6
+                    );
+                }, i * 200);
+            }
+            
+            createConfetti(300);
+            createHeart(50);
+            createBalloon(30);
+            
+            // Button feedback
+            const btn = document.querySelector('.blast-btn');
+            btn.style.transform = 'scale(1.2)';
+            setTimeout(() => btn.style.transform = 'scale(1)', 200);
+        }
+
+        // Auto Celebration every 30 seconds
+        function autoCelebrate() {
+            createFirework(
+                Math.random() * window.innerWidth,
+                Math.random() * window.innerHeight * 0.5
+            );
+            createConfetti(100);
+        }
+
+        // Initial Animations
+        setTimeout(() => createConfetti(100), 1000);
+        setTimeout(() => createBalloon(10), 2000);
+        
+        // Continuous subtle confetti
+        setInterval(() => {
+            if (Math.random() > 0.7) createConfetti(30);
+        }, 3000);
+
+        // Click anywhere for mini blast
+        document.addEventListener('click', (e) => {
+            createFirework(e.clientX, e.clientY);
+            createSparkle(e.clientX, e.clientY);
+        });
+
+        // Periodic fireworks
+        setInterval(() => {
+            if (Math.random() > 0.6) {
+                createFirework(
+                    Math.random() * window.innerWidth,
+                    Math.random() * window.innerHeight * 0.5
+                );
+            }
+        }, 4000);
+    </script>
+</body>
+</html>          
+                                                                                                                                                                                                                                   
