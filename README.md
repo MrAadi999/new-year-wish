@@ -1,7 +1,9 @@
-# new-year-wish
+# NEW-YEAR-WISH
 # 🎊 Happy New Year 2026 🎊
 
 A stunning, interactive New Year celebration website featuring stunning animations, fireworks, confetti, countdown timer, and more!
+
+🌐 **Live Demo:** [https://perposal-seven.vercel.app](https://perposal-seven.vercel.app)
 
 ![Happy New Year 2026](https://img.shields.io/badge/Happy%20New%20Year-2026-blue)
 ![HTML5](https://img.shields.io/badge/HTML5-Celebration-orange)
@@ -45,6 +47,8 @@ python3 -m http.server 8080
 
 ### Option 3: Vercel Deployment (Recommended for sharing)
 
+**Live Demo:** [https://perposal-seven.vercel.app](https://perposal-seven.vercel.app)
+
 1. Push to GitHub:
 ```bash
 git init
@@ -63,7 +67,7 @@ git commit -m "Initial commit - Happy New Year 2026"
 
 3. Share with custom name:
 ```
-https://your-site.vercel.app/happy_new_year_2026.html?name=YourName
+https://perposal-seven.vercel.app/happy_new_year_2026.html?name=YourName
 ```
 
 ## 🎮 How to Use
@@ -149,7 +153,7 @@ happy_new_year_2026/
 
 Example:
 ```
-https://your-site.vercel.app/happy_new_year_2026.html?name=Aadi&photo=https://example.com/photo.jpg
+https://perposal-seven.vercel.app/happy_new_year_2026.html?name=Aadi&photo=https://example.com/photo.jpg
 ```
 
 ## 🤝 Contributing
